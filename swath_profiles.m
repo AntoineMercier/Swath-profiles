@@ -1,5 +1,10 @@
 clear all, close all, clc
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% PREREQUISITIES
+% Image processing toolbox
+% TopoToolBox 
+% Mapping Toolbox 
+
 % PARAMETERS
 dem='DEM.tif'; % Input DEM /!\ DEM Must be in projected coordinates (in meters)
 swathwidth=5000; % Swath profile with in meter 
