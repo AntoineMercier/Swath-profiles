@@ -58,7 +58,7 @@ z_mean = mean(sw1.Z,1)'*10^-3;
 z_std = std(sw1.Z,0,1)'*10^-3;
 dist = sw1.distx*10^-3;
 
-figure(2)
+figure
 hold on
 plot(dist,z_max,'r-');
 plot(dist,z_mean,'k-','linewidth',2);
@@ -67,9 +67,9 @@ plot(dist,z_min,'b-');
 xlim([min(dist) max(dist)]);
 legend('Max','Mean','+/- Std','Min')
 box on
-title(['Swath profile n° ' num2str(nprofiles)])
-ylabel('Elevation (m)')
-xlabel('Distance along profile (m)')
+title(['Swath profile n° ' num2str(i)])
+ylabel('Elevation (km)')
+xlabel('Distance along profile (km)')
 if ToScale == 1, axis equal, end 
 
 fid = fopen(char(strcat('swath_profile_n',num2str(nprofiles),'.txt')),'w'); % Change output file name
